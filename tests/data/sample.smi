@@ -1,0 +1,20 @@
+<SAMI>
+<HEAD>
+<TITLE>Samitizer</TITLE>
+<STYLE TYPE="text/css">
+<!--
+.KRCC { Name:Korean; lang:ko-KR; SAMIType:CC; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+<!--
+some comments here
+-->
+<SYNC Start=0><P Class=KRCC>
+1
+<SYNC Start=1000><P Class=KRCC>
+2
+<SYNC Start=3600000><P Class=KRCC>&nbsp;
+</BODY>
+</SAMI>

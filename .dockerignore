@@ -1,0 +1,11 @@
+build/
+dist/
+venv/
+.coverage
+.gitignore
+.dockerignore
+.travis.yml
+Dockerfile
+LICENSE
+README.md
+*.egg-info
