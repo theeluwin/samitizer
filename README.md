@@ -1,6 +1,6 @@
 # Samitizer
 
-[![Build Status](https://travis-ci.org/theeluwin/samitizer.svg?branch=master)](https://travis-ci.org/theeluwin/samitizer)
+[![Actions Status](https://github.com/theeluwin/samitizer/workflows/test/badge.svg)](https://github.com/theeluwin/samitizer/actions)
 [![Coverage Status](https://coveralls.io/repos/github/theeluwin/samitizer/badge.svg?branch=master)](https://coveralls.io/github/theeluwin/samitizer?branch=master)
 [![PyPI version](https://badge.fury.io/py/samitizer.svg)](https://badge.fury.io/py/samitizer)
 
