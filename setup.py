@@ -11,7 +11,7 @@ requirements = (
 
 setup(
     name='samitizer',
-    version='0.1.10',
+    version='0.2.1',
     license='MIT',
     author='Jamie Seol',
     author_email='theeluwin@gmail.com',
