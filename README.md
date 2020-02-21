@@ -25,16 +25,17 @@ $ sudo apt-get install uchardet
 
 
 ```python
-from samitizer import Smi
+from samitizer import Sami
 
 # Using `encoding=None` will invoke the `uchardet` with a subprocess call.
-smi = Smi('sample.smi', encoding=None)
+# Tip: try `encoding='cp949'` if nothing works.
+sami = Sami('sample.smi', encoding=None)
 
 # These `subtitles` are intances of the `samitizer.Subtitle` class.
-print(smi.subtitles[0].content['KRCC'])
+print(sami.subtitles[0].lang2content['KRCC'])
 
-vtt_text = smi.convert('vtt', lang='KRCC')
-plain_text = smi.convert('plain', lang='KRCC')
+vtt_text = sami.convert('vtt', lang='KRCC')
+plain_text = sami.convert('plain', lang='KRCC')
 ```
 
 ## Test
@@ -57,9 +58,3 @@ or, with docker.
 $ docker build -t samitizer -f Dockerfile .
 $ docker run samitizer
 ```
-
-## Todo
-
-* code refactoring
-
-* add flake8 when building with github action

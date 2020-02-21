@@ -4,4 +4,3 @@ ignore =
     E501
 exclude =
     build
-    venv

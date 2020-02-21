@@ -8,7 +8,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: build docker image
-      run: docker build -t samitizer -f Dockerfile .
+      run: docker build -t samitizer .
     - name: test with docker
       run: docker run samitizer
   test:
@@ -27,6 +27,8 @@ jobs:
         pip install nose nose-exclude flake8 coverage coveralls
     - name: test with nose
       run: nosetests --config=.noserc
+    - name: lint with flake
+      run: flake8
     - name: send to coveralls
       env:
         COVERALLS_REPO_TOKEN: ${{ secrets.coveralls_token }}
