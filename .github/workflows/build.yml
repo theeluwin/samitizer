@@ -1,0 +1,25 @@
+name: build
+
+on: ["push", "pull_request"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: build docker image
+      run: docker build -t samitizer -f Dockerfile .
+    - name: test with docker
+      run: docker run samitizer
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: apt install
+      run: apt-get install uchardet
+    - name: test with nose
+      run: nosetests --config=.noserc
+    - name: send to coveralls
+      uses: coverallsapp/github-action@master
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
