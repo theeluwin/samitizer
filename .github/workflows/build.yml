@@ -17,9 +17,17 @@ jobs:
     - uses: actions/checkout@master
     - name: apt install
       run: sudo apt-get install uchardet
+    - name: prepare python
+      uses: actions/setup-python@v1
+      with:
+        python-version: '3.x'
+    - name: pip install
+      run: |
+        python -m pip install --upgrade pip
+        pip install nose nose-exclude flake8 coverage coveralls
     - name: test with nose
       run: nosetests --config=.noserc
     - name: send to coveralls
-      uses: coverallsapp/github-action@master
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
+      env:
+        COVERALLS_REPO_TOKEN: ${{ secrets.coveralls_token }}
+      run: coveralls
