@@ -16,7 +16,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: apt install
-      run: apt-get install uchardet
+      run: sudo apt-get install uchardet
     - name: test with nose
       run: nosetests --config=.noserc
     - name: send to coveralls
