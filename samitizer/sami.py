@@ -88,7 +88,7 @@ class Sami:
 
         # check supporting formats
         if target not in CONVERT_TARGETS:
-            raise NotImplementedError
+            raise NotImplementedError(f"Supporting formats are: {', '.join(CONVERT_TARGETS)}.")
 
         # vtt format
         if target == 'vtt':
@@ -111,7 +111,7 @@ class Sami:
             converted = '\n'.join(lines)
 
         # newline at the end
-        return converted if converted[-1] == '\n' else converted + '\n'
+        return converted + '\n'
 
     def tplit(self, text, tag):
         delimiter = f'<{tag}'

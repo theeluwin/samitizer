@@ -8,21 +8,19 @@ A Python library for parsing SAMI files.
 
 This project was once [theeluwin/PySAMI](https://github.com/theeluwin/PySAMI), which was forked from [g6123/PySAMI](https://github.com/g6123/PySAMI), thus the license is preserved as @g6123's.
 
-
 ## Installation
 
 ```bash
-$ pip install samitizer
+pip install samitizer
 ```
 
 To use the automatic charset detection feature, you need to install the `uchardet` too.
 
 ```bash
-$ sudo apt-get install uchardet
+sudo apt-get install uchardet
 ```
 
 ## Usage
-
 
 ```python
 from samitizer import Sami
@@ -43,18 +41,18 @@ plain_text = sami.convert('plain', lang='KRCC')
 Testing requires some additional packages (`flake8` is optional though).
 
 ```bash
-$ pip install nose nose-exclude flake8 coverage
+pip install nose nose-exclude flake8 coverage
 ```
 
 You can test with the [nose](https://nose.readthedocs.io/)
 
 ```bash
-$ nosetests --config=.noserc
+nosetests --config=.noserc
 ```
 
 or, with docker.
 
 ```bash
-$ docker build -t samitizer -f Dockerfile .
-$ docker run samitizer
+docker build -t samitizer -f Dockerfile .
+docker run samitizer
 ```

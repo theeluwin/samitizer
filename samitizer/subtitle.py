@@ -18,10 +18,10 @@ class Subtitle:
 
         # check supporting formats
         if target not in CONVERT_TARGETS:
-            raise NotImplementedError
+            raise NotImplementedError(f"Supporting formats are: {', '.join(CONVERT_TARGETS)}.")
 
-        # if lang is not supported, just raise KeyError
-        content = self.lang2content[lang]
+        # if lang is not supported, return blank
+        content = self.lang2content.get(lang, '')
 
         # vtt format
         if target == 'vtt':
