@@ -110,8 +110,7 @@ class Sami:
                     lines.append(line)
             converted = '\n'.join(lines)
 
-        # newline at the end
-        return converted + '\n'
+        return converted
 
     def tplit(self, text, tag):
         delimiter = f'<{tag}'

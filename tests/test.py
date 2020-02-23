@@ -13,9 +13,9 @@ class TestSamitizer(unittest.TestCase):
         data_dir = pjoin(os.path.dirname(os.path.abspath(__file__)), 'data')
         self.sami_filepath = pjoin(data_dir, 'sample.smi')
         with open(pjoin(data_dir, 'sample.vtt')) as fp:
-            self.vtt_text = fp.read()
+            self.vtt_text = fp.read().strip()
         with open(pjoin(data_dir, 'sample.txt')) as fp:
-            self.plain_text = fp.read()
+            self.plain_text = fp.read().strip()
         with open(pjoin(data_dir, 'str_test.txt')) as fp:
             self.str_subtitles = fp.read().strip().split('\n')
 
