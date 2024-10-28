@@ -43,7 +43,11 @@ class Sami:
 
             # parse start stamp
             try:
-                stamp = int(self.refind(line, '<sync start=([0-9]+)').group(1))
+                sync = self.refind(line, '<sync start=([0-9]+)')
+                if sync:
+                    stamp = int(sync.group(1))
+                else:
+                    stamp = -1
             except ValueError:
                 continue
             except TypeError:
@@ -56,7 +60,7 @@ class Sami:
                 lang = self.refind(raw_paragraph, '<p(.+)class=([a-z]+)').group(2)
                 if not lang:
                     continue
-                tag_pointer = self.refind(raw_paragraph, '<p(.+)>').end()
+                tag_pointer = self.refind(raw_paragraph, '<p(.+?)>').end()
                 content = raw_paragraph[tag_pointer:]
                 content = content.replace('\n', '')
                 content = content.replace('&nbsp;', ' ')
