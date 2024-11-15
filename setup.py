@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 from setuptools import setup
 from setuptools import find_packages
 
@@ -11,7 +9,7 @@ requirements = (
 
 setup(
     name='samitizer',
-    version='0.2.3',
+    version='0.2.4',
     license='MIT',
     author='Jamie Seol',
     author_email='theeluwin@gmail.com',

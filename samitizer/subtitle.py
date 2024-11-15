@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 from .const import STAMP_PADDING
 from .const import CONVERT_TARGETS
 

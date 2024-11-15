@@ -20,7 +20,7 @@ jobs:
     - name: prepare python
       uses: actions/setup-python@v1
       with:
-        python-version: '3.x'
+        python-version: '3.11'
     - name: pip install
       run: |
         python -m pip install --upgrade pip
